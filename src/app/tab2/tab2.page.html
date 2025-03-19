@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let pokemon of pokemonList">
+      <ion-thumbnail slot="start" *ngIf="pokemon.details">
+        <ion-img [src]="pokemon.details.sprites.front_default"></ion-img>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{pokemon.name | titlecase}}</h2>
+        <p *ngIf="pokemon.details">Altura: {{pokemon.details.height / 10}}m</p>
+        <p *ngIf="pokemon.details">Peso: {{pokemon.details.weight / 10}}kg</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

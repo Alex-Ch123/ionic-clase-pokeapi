@@ -1,0 +1,7 @@
+{
+  "name": "appclase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
